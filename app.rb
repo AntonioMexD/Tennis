@@ -1,7 +1,9 @@
 require 'sinatra'
-
+require './lib/tablero.rb'
 
 get '/' do
+    tablero = Tablero.new()
+    @marcador_actual =tablero.marcador()
     erb :tablero_view
 end
 
